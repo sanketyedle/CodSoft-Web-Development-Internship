@@ -1,0 +1,104 @@
+/* Style */
+  body {
+    background: #ffffff;
+    font-family: "Times New Roman", Times, serif;
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
+  }
+  /*---------------------------------------
+      MENU              
+  -----------------------------------------*/
+  .navbar-default {
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.075);
+    border: 2px solid ;
+    border-image: linear-gradient( #ff0707 0%, #7a00e4 50%, #a7a200 100%) 1;
+    margin-bottom: 0;
+    padding: 10px;
+  }
+  /*------------*/
+  .first-logo{
+    background: -webkit-linear-gradient(225deg, #fb0909 0%, #d0027e 50%, #020dd8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    font-size:26px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .navbar-default .logo {
+    background: -webkit-linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    font-size:24px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  /*CALCULATOR*/
+  .calculator {
+    width: 350px;
+    background-color: #b1adad;
+    border: 8px solid #000000;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.display {
+    text-align: right;
+    padding: 10px;
+    font-size: 2em;
+    background-color: #fff;
+    border: 3px dotted #090046;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color:#1a00c5;;
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    flex: 1;
+    padding: 16px;
+    font-size: 1.8em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.clear{
+  background-color: red;
+    color: #ffffff;
+}
+.back{
+  background-color: rgb(210, 0, 157);
+    color: #ffffff;
+}
+.operators {
+    background-color: blue;
+    color: #ffffff;
+}
+.equal {
+  background-color: green;
+  color: #ffffff;
+}
+.equal:hover {
+  background-color: #850066;
+}
+button:hover {
+    background-color: rgb(255, 251, 0);
+}
+.operators:hover {
+  background-color: rgb(0, 0, 0);
+}
+/*/

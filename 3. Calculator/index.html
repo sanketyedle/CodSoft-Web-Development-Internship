@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Calculator</title>
+     <link rel="shortcut icon" type="image/jpg" href="images/logo.png"/>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="css/style.css">
+</head>
+<body >
+<!-- lOGO TEXT HERE -->
+<center>
+           <a href="index.html" class="logo"><span class="first-logo"><img src="images/logo.png" alt="Calculator" height="55px" width="55px">Calculator</span></a>
+<br><br>
+     <!-- CALCULATOR -->
+     <div class="calculator">
+          <div class="display" id="display">0</div>
+          <div class="keys">
+              <div class="row">
+                  <button onclick="clearDisplay()" class="button clear">C</button>
+                  <button onclick="backspace()" class="button back">⌫</button>
+                  <button onclick="appendToDisplay('/')" class="button operators">/</button>
+                  <button onclick="appendToDisplay('*')" class="button operators">*</button>
+              </div></div>
+              
+              <div class="row">
+                  <button onclick="appendToDisplay('7')">7</button>
+                  <button onclick="appendToDisplay('8')">8</button>
+                  <button onclick="appendToDisplay('9')">9</button>
+                  <button onclick="appendToDisplay('-')" class="button operators">-</button>
+              </div>
+              <div class="row">
+                  <button onclick="appendToDisplay('4')">4</button>
+                  <button onclick="appendToDisplay('5')">5</button>
+                  <button onclick="appendToDisplay('6')">6</button>
+                  <button onclick="appendToDisplay('+')" class="button operators">+</button>
+              </div>
+              <div class="row">
+                  <button onclick="appendToDisplay('1')">1</button>
+                  <button onclick="appendToDisplay('2')">2</button>
+                  <button onclick="appendToDisplay('3')">3</button>
+                  <button onclick="appendToDisplay('0')">0</button>
+              </div>
+              <div class="row">
+                  <button onclick="appendToDisplay('.')">.</button>
+                  <button onclick="calculate()" class="button equal">=</button>
+              </div>
+          </div>
+      </div>
+
+               <span class="first-logo">DESIGNED BY SANKET YEDLE</span></center>
+              <script>
+               let displayValue = '0';
+           
+           function updateDisplay() {
+               document.getElementById('display').innerText = displayValue;
+           }
+           
+           function appendToDisplay(value) {
+               if (displayValue === '0' && value !== '.') {
+                   displayValue = value;
+               } else {
+                   displayValue += value;
+               }
+               updateDisplay();
+           }
+           
+           function clearDisplay() {
+               displayValue = '0';
+               updateDisplay();
+           }
+           
+           function backspace() {
+               displayValue = displayValue.slice(0, -1);
+               if (displayValue === '') {
+                   displayValue = '0';
+               }
+               updateDisplay();
+           }
+           
+           function calculate() {
+               try {
+                   displayValue = eval(displayValue).toString();
+                   updateDisplay();
+               } catch (error) {
+                   displayValue = 'Error';
+                   updateDisplay();
+               }
+           }
+           
+               </script>
+</body>
+</html>
